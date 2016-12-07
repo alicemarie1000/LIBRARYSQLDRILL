@@ -1,0 +1,270 @@
+
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Alice>cd..
+
+C:\Users>cd..
+
+C:\>cd joes2pro
+The system cannot find the path specified.
+
+C:\>cd joes2pro
+The system cannot find the path specified.
+
+C:\>dir
+ Volume in drive C is Local Disk
+ Volume Serial Number is DAD9-FB3C
+
+ Directory of C:\
+
+10/15/2016  02:03 PM    <DIR>          Intel
+12/06/2016  03:11 PM    <DIR>          Joes2Pros
+12/02/2016  10:54 AM    <DIR>          Program Files
+12/02/2016  10:54 AM    <DIR>          Program Files (x86)
+12/01/2016  11:47 PM    <DIR>          Users
+12/03/2016  06:18 PM    <DIR>          Windows
+               0 File(s)              0 bytes
+               6 Dir(s)  216,150,765,568 bytes free
+
+C:\>cd Joes2Pros
+
+C:\Joes2Pros>dir
+ Volume in drive C is Local Disk
+ Volume Serial Number is DAD9-FB3C
+
+ Directory of C:\Joes2Pros
+
+12/06/2016  03:11 PM    <DIR>          .
+12/06/2016  03:11 PM    <DIR>          ..
+12/06/2016  03:11 PM             1,398 CreateDBLibrary.sql
+12/06/2016  05:39 PM             4,205 LibraryPopulatescr.sql
+12/06/2016  03:11 PM                20 SQLQuery3.sql
+12/04/2016  02:48 PM             1,339 Try this.sql
+               4 File(s)          6,962 bytes
+               2 Dir(s)  216,150,765,568 bytes free
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+Msg 206, Level 16, State 2, Server DESKTOP-0QNKGLB, Line 95
+Operand type clash: int is incompatible with date
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+Msg 206, Level 16, State 2, Server DESKTOP-0QNKGLB, Line 95
+Operand type clash: int is incompatible with date
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+Msg 2627, Level 14, State 1, Server DESKTOP-0QNKGLB, Line 2
+Violation of PRIMARY KEY constraint 'PK__PUBLISHE__737584F737F24A6D'. Cannot insert duplicate key in object 'dbo.PUBLISHER'. The duplicate key value is (Pam Dobbs).
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 21
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Book__PublisherN__1BFD2C07". The conflict occurred in database "LBRYDB", table "dbo.PUBLISHER", column 'Name'.
+The statement has been terminated.
+Msg 245, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 43
+Conversion failed when converting the varchar value 'Sharpstown' to data type int.
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+Msg 2627, Level 14, State 1, Server DESKTOP-0QNKGLB, Line 2
+Violation of PRIMARY KEY constraint 'PK__PUBLISHE__737584F737F24A6D'. Cannot insert duplicate key in object 'dbo.PUBLISHER'. The duplicate key value is (Pam Dobbs).
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 21
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Book__PublisherN__1BFD2C07". The conflict occurred in database "LBRYDB", table "dbo.PUBLISHER", column 'Name'.
+The statement has been terminated.
+
+(4 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 49
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_AUTH__BookI__1CF15040". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 61
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_COPI__BookI__1DE57479". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+
+(10 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 95
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_LOAN__BookI__1FCDBCEB". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+Msg 102, Level 15, State 1, Server DESKTOP-0QNKGLB, Line 91
+Incorrect syntax near '*'.
+
+C:\Joes2Pros>SQLCMD -S(local0 -E -i LibraryPopulatescr.sql
+Sqlcmd: Error: Microsoft SQL Server Native Client 11.0 : Named Pipes Provider: Could not open a connection to SQL Server [53]. .
+Sqlcmd: Error: Microsoft SQL Server Native Client 11.0 : Login timeout expired.
+Sqlcmd: Error: Microsoft SQL Server Native Client 11.0 : A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online..
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 20
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Book__PublisherN__1BFD2C07". The conflict occurred in database "LBRYDB", table "dbo.PUBLISHER", column 'Name'.
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-0QNKGLB, Line 43
+Violation of PRIMARY KEY constraint 'PK__LIBRARY___A1682FC5799644CD'. Cannot insert duplicate key in object 'dbo.LIBRARY_BRANCH'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 49
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_AUTH__BookI__1CF15040". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 61
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_COPI__BookI__1DE57479". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-0QNKGLB, Line 83
+Violation of PRIMARY KEY constraint 'PK__BORROWER__55FF25F11CA409EC'. Cannot insert duplicate key in object 'dbo.BORROWER'. The duplicate key value is (100).
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 95
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_LOAN__BookI__1FCDBCEB". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 20
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_AUTH__BookI__1CF15040". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 32
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Book__PublisherN__1BFD2C07". The conflict occurred in database "LBRYDB", table "dbo.PUBLISHER", column 'Name'.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 54
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_COPI__BookI__1DE57479". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 76
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_LOAN__BookI__1FCDBCEB". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+
+(4 rows affected)
+
+(10 rows affected)
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatesscr.sql
+Sqlcmd: 'LibraryPopulatesscr.sql': Invalid filename.
+
+C:\Joes2Pros>dir
+ Volume in drive C is Local Disk
+ Volume Serial Number is DAD9-FB3C
+
+ Directory of C:\Joes2Pros
+
+12/06/2016  03:11 PM    <DIR>          .
+12/06/2016  03:11 PM    <DIR>          ..
+12/06/2016  07:11 PM             1,417 CreateDBLibrary.sql
+12/06/2016  07:38 PM             4,167 LibraryPopulatescr.sql
+12/06/2016  03:11 PM                20 SQLQuery3.sql
+12/04/2016  02:48 PM             1,339 Try this.sql
+               4 File(s)          6,943 bytes
+               2 Dir(s)  216,401,793,024 bytes free
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 20
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_AUTH__BookI__1CF15040". The conflict occurred in database "LBRYDB", table "dbo.Book", column 'BookId'.
+The statement has been terminated.
+
+(20 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 54
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_COPI__Branc__1ED998B2". The conflict occurred in database "LBRYDB", table "dbo.LIBRARY_BRANCH", column 'BranchId'.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 76
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_LOAN__Branc__20C1E124". The conflict occurred in database "LBRYDB", table "dbo.LIBRARY_BRANCH", column 'BranchId'.
+The statement has been terminated.
+
+(4 rows affected)
+
+(10 rows affected)
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+
+(20 rows affected)
+
+(10 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 55
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_LOAN__Branc__20C1E124". The conflict occurred in database "LBRYDB", table "dbo.LIBRARY_BRANCH", column 'BranchId'.
+The statement has been terminated.
+
+(4 rows affected)
+
+(20 rows affected)
+
+(10 rows affected)
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+
+(20 rows affected)
+
+(10 rows affected)
+
+(4 rows affected)
+Msg 547, Level 16, State 1, Server DESKTOP-0QNKGLB, Line 60
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BOOK_LOAN__CardN__21B6055D". The conflict occurred in database "LBRYDB", table "dbo.BORROWER", column 'CardNo'.
+The statement has been terminated.
+
+(20 rows affected)
+
+(10 rows affected)
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+
+(20 rows affected)
+
+(10 rows affected)
+
+(4 rows affected)
+Msg 2627, Level 14, State 1, Server DESKTOP-0QNKGLB, Line 60
+Violation of PRIMARY KEY constraint 'PK__BORROWER__55FF25F11CA409EC'. Cannot insert duplicate key in object 'dbo.BORROWER'. The duplicate key value is (100).
+The statement has been terminated.
+
+(10 rows affected)
+
+(20 rows affected)
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+
+(20 rows affected)
+
+(10 rows affected)
+
+(4 rows affected)
+Msg 2627, Level 14, State 1, Server DESKTOP-0QNKGLB, Line 60
+Violation of PRIMARY KEY constraint 'PK__BORROWER__55FF25F11CA409EC'. Cannot insert duplicate key in object 'dbo.BORROWER'. The duplicate key value is (100).
+The statement has been terminated.
+
+(10 rows affected)
+
+(20 rows affected)
+
+C:\Joes2Pros>SQLCMD -S(local) -E -i LibraryPopulatescr.sql
+Changed database context to 'LBRYDB'.
+
+(16 rows affected)
+
+(20 rows affected)
+
+(10 rows affected)
+
+(4 rows affected)
+
+(10 rows affected)
+
+(10 rows affected)
+
+(20 rows affected)
+
+C:\Joes2Pros>
