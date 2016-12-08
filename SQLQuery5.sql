@@ -1,0 +1,7 @@
+USE LBRYDB
+
+SELECT LIBRARY_BRANCH.BranchName, Count(Library_Branch.BranchId)FROM
+LIBRARY_BRANCH
+INNER JOIN BOOK_LOANS
+ON LIBRARY_BRANCH.BranchId = BOOK_LOANS.BranchId
+Group By Library_Branch.BranchName
