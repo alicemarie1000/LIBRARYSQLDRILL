@@ -7,6 +7,5 @@ ON Borrower.CardNo = BOOK_LOANS.CardNo
 Group By Borrower.Name
 HAVING Count(*) > 4
 
-Select * FROM Borrower
-Select * FROM Book_Loans
+
 
